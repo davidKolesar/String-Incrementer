@@ -4,11 +4,13 @@ var containsNumber = false;
 
 //check if parameters contain numbers
 for(var i = 0; i < chars.length; i++) {
-
   if(Number.isInteger(chars[i])){
-  
+    containsNumber = true;
+    return string + 1;
   }
   
-}
+  if(){
 
+  }
+  
 }
