@@ -1,7 +1,9 @@
-function incrementString (string) {
+function incrementString (string) 
+{
 
 	//check if parameter is null
-	if(string === null) {
+	if(string === null) 
+	{
 	return 1;
 	}
 
@@ -9,13 +11,16 @@ function incrementString (string) {
 	var containsNumber = false;
 
 	//check if parameters doesn't contain numbers
-	for(var i = 0; i < chars.length; i++) {
-	  if(typeof chars[i] == 'number'){
+	for(var i = 0; i < chars.length; i++) 
+	{
+	  if(typeof chars[i] == 'number')
+	  {
 		containsNumber = true;
 		break;
 	  } 
 	}
-	  if(containsNumber === false){
+	  if(containsNumber === false)
+	  {
 		return string + 1;
 	  }
   
