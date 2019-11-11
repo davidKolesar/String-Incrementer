@@ -1,4 +1,10 @@
 function incrementString (string) {
+
+	//check if parameter is null
+	if(string === null) {
+	return 1;
+	}
+
 	var chars = string.split('');
 	var containsNumber = false;
 
