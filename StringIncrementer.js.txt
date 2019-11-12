@@ -38,8 +38,8 @@ for(var i = 0; i < chars.length; i++)
 //handle adding with preceeding digits of zeros
 for(var i = 0; i < numbersWithinString.length; i++)
 {
-
 //count zeros
+
 
 //check for 9s
 
