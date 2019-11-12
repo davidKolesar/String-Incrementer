@@ -1,5 +1,6 @@
 function incrementString (string) 
 {
+
 	//check if parameter is null
 	if(string === null) 
 	{
@@ -9,9 +10,8 @@ function incrementString (string)
 	//check if parameters contain numbers
 	var chars = string.split('');
 	var containsNumber = false;
-	var numbersWithinString[];
-	var numbersToReturn[];
-	var totalDigitsOfNumber++;
+	var numbersWithinString = [];
+	var numbersToReturn = [];
 
 	for(var i = 0; i < chars.length; i++) 
 	{
@@ -28,18 +28,9 @@ function incrementString (string)
 		return string + 1;
 	  }
 	 
-	 //add numbers
-	 var finalNumber = numbersWithinString[numbersWithinString.length];
-	 
-	 if(finalNumber === 9)
-	 { 
-	 
-	 } 
-	 else
-	 {
-	  var numbersWithinString[totalDigitsOfNumber] = 
-	  numbersWithinString.splice(index, 0, objectName)
-	  var newSum = [numbersWithinString].join("");
-	 }
-	 
+	//add numbers
+	var finalNumberWithCommas = numbersWithinString.toString();
+	var finalNumber = finalNumberWithCommas.replace(",", "");
+
+ 
 }
