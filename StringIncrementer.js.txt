@@ -4,6 +4,7 @@ function incrementString (argument)
 //check if parameter is null
 if(argument === null) 
 {
+console.log("return null");
   return 1;
 }
 
@@ -17,7 +18,7 @@ var lettersWithinString = [];
 
 for(var i = 0; i < chars.length; i++) 
 {
-  if(typeof chars[i] == 'number')
+  if(!Number.isNaN(chars[i]))
   {
     containsNumber = true;
     numbersWithinString.push(chars[i]);
@@ -25,27 +26,26 @@ for(var i = 0; i < chars.length; i++)
   } 
   else 
   {
-  lettersWithinString.push(chars[i]);
+    lettersWithinString.push(chars[i]);
   }
 }
+
   if(containsNumber === false)
   {
-    return argument + 1;
+  console.log(lettersWithinString.toString());
+  return argument + 1;
   } 
  
 //add numbers
 var argumentNumberWithCommas = numbersWithinString.toString();
 var argumentNumberWithoutCommas = argumentNumberWithCommas.replace(",", "");
-var argumentNumber = argumentNumberWithoutCommas.parseInt();
-var finalNumber = argumentNumber++;
- 
+var argumentNumber = parseInt(argumentNumberWithoutCommas);
+argumentNumber++;
 //combine String of argument with numbers
-lettersWithinString
-
 var argumentLettersWithCommas = lettersWithinString.toString();
 var argumentLettersWithoutCommas = argumentLettersWithCommas.replace(",", "");
 
 
- return argumentLettersWithoutCommas + finalNumber;
+ return argumentLettersWithoutCommas + argumentNumber;
  
 }
