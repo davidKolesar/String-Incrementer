@@ -31,7 +31,7 @@ for(var i = 0; i < chars.length; i++)
   if(containsNumber === false)
   {
     return argument + 1;
-  }
+  } 
  
 //add numbers
 var argumentNumberWithCommas = numbersWithinString.toString();
@@ -39,6 +39,13 @@ var argumentNumberWithoutCommas = argumentNumberWithCommas.replace(",", "");
 var argumentNumber = argumentNumberWithoutCommas.parseInt();
 var finalNumber = argumentNumber++;
  
- return argument + finalNumber;
+//combine String of argument with numbers
+lettersWithinString
+
+var argumentLettersWithCommas = lettersWithinString.toString();
+var argumentLettersWithoutCommas = argumentLettersWithCommas.replace(",", "");
+
+
+ return argumentLettersWithoutCommas + finalNumber;
  
 }
