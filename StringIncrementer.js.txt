@@ -1,36 +1,37 @@
-function incrementString (string) 
+function incrementString (argument) 
 {
 
-	//check if parameter is null
-	if(string === null) 
-	{
-	  return 1;
-	}
+//check if parameter is null
+if(argument === null) 
+{
+  return 1;
+}
 
-	//check if parameters contain numbers
-	var chars = string.split('');
-	var containsNumber = false;
-	var numbersWithinString = [];
-	var numbersToReturn = [];
+//check if parameters contain numbers
+var chars = argument.split('');
+var containsNumber = false;
+var numbersWithinString = [];
+var numbersToReturn = [];
 
-	for(var i = 0; i < chars.length; i++) 
-	{
-	  if(typeof chars[i] == 'number')
-	  {
-		containsNumber = true;
-		totalDigitsOfNumber++;
-		numbersWithinString.push(chars[i]);
-		break;
-	  } 
-	}
-	  if(containsNumber === false)
-	  {
-		return string + 1;
-	  }
-	 
-	//add numbers
-	var finalNumberWithCommas = numbersWithinString.toString();
-	var finalNumber = finalNumberWithCommas.replace(",", "");
-
+for(var i = 0; i < chars.length; i++) 
+{
+  if(typeof chars[i] == 'number')
+  {
+    containsNumber = true;
+    numbersWithinString.push(chars[i]);
+    break;
+  } 
+}
+  if(containsNumber === false)
+  {
+    return argument + 1;
+  }
+ 
+//add numbers
+var finalNumberWithCommas = numbersWithinString.toString();
+var finalNumberWithoutCommas = finalNumberWithCommas.replace(",", "");
+var finalNumber = finalNumber.parseInt();
+ 
+return argument + (finalNumber + 1);
  
 }
