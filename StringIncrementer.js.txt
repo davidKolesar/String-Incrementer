@@ -12,6 +12,8 @@ var chars = argument.split('');
 var containsNumber = false;
 var numbersWithinString = [];
 var numbersToReturn = [];
+var lettersWithinString = [];
+
 
 for(var i = 0; i < chars.length; i++) 
 {
@@ -21,6 +23,10 @@ for(var i = 0; i < chars.length; i++)
     numbersWithinString.push(chars[i]);
     break;
   } 
+  else 
+  {
+  lettersWithinString.push(chars[i]);
+  }
 }
   if(containsNumber === false)
   {
