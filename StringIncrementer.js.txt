@@ -18,15 +18,15 @@ var lettersWithinString = [];
 
 for(var i = 0; i < chars.length; i++) 
 {
-  if(!Number.isNaN(chars[i]))
+  if(isNaN(parseFloat(chars[i])))
+  {
+      lettersWithinString.push(chars[i]);
+  } 
+  else 
   {
     containsNumber = true;
     numbersWithinString.push(chars[i]);
     break;
-  } 
-  else 
-  {
-    lettersWithinString.push(chars[i]);
   }
 }
 
