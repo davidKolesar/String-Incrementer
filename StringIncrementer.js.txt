@@ -28,10 +28,11 @@ for(var i = 0; i < chars.length; i++)
   }
  
 //add numbers
-var finalNumberWithCommas = numbersWithinString.toString();
-var finalNumberWithoutCommas = finalNumberWithCommas.replace(",", "");
-var finalNumber = finalNumber.parseInt();
+var argumentNumberWithCommas = numbersWithinString.toString();
+var argumentNumberWithoutCommas = argumentNumberWithCommas.replace(",", "");
+var argumentNumber = argumentNumberWithoutCommas.parseInt();
+var finalNumber = argumentNumber++;
  
-return argument + (finalNumber + 1);
+ return argument + finalNumber;
  
 }
