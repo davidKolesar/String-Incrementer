@@ -32,15 +32,28 @@ for(var i = 0; i < chars.length; i++)
 
   if(containsNumber === false)
   {
-  console.log(lettersWithinString.toString());
-  return argument + 1;
+   return argument + 1;
   } 
  
+//handle adding with preceeding digits of zeros
+for(var i = 0; i < numbersWithinString.length; i++)
+{
+
+//count zeros
+
+//check for 9s
+
+}
+
+
+
+
 //add numbers
 var argumentNumberWithCommas = numbersWithinString.toString();
 var argumentNumberWithoutCommas = argumentNumberWithCommas.replace(/\,/g,"");
 var argumentNumber = parseInt(argumentNumberWithoutCommas);
 argumentNumber++;
+
 
 //combine String of argument with numbers
 var argumentLettersWithCommas = lettersWithinString.toString();
