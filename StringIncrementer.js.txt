@@ -38,12 +38,13 @@ for(var i = 0; i < chars.length; i++)
  
 //add numbers
 var argumentNumberWithCommas = numbersWithinString.toString();
-var argumentNumberWithoutCommas = argumentNumberWithCommas.replace(",", "");
+var argumentNumberWithoutCommas = argumentNumberWithCommas.replace(/\,/g,"");
 var argumentNumber = parseInt(argumentNumberWithoutCommas);
 argumentNumber++;
+
 //combine String of argument with numbers
 var argumentLettersWithCommas = lettersWithinString.toString();
-var argumentLettersWithoutCommas = argumentLettersWithCommas.replace(",", "");
+var argumentLettersWithoutCommas = argumentLettersWithCommas.replace(/\,/g,"");;
 
 
  return argumentLettersWithoutCommas + argumentNumber;
