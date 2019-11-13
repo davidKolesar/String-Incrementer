@@ -35,7 +35,7 @@ for(var i = 0; i < chars.length; i++)
   } 
  
  var preceedingZeros = 0;
- 
+
 //handle adding with preceeding digits of zeros
 for(var i = 0; i < numbersWithinString.length; i++)
 {
@@ -50,6 +50,12 @@ console.log("Here is a zero!");
 }
 
 
+//handle if number in argument is all zeros
+if(numbersWithinString.length === preceedingZeros)
+{
+preceedingZeros--;
+return 
+}
 
 
 //add numbers
