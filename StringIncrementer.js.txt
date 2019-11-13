@@ -35,10 +35,16 @@ for(var i = 0; i < chars.length; i++)
    return argument + 1;
   } 
  
+ var preceedingZeros = 0;
+ 
 //handle adding with preceeding digits of zeros
 for(var i = 0; i < numbersWithinString.length; i++)
 {
+
 //count zeros
+if(numbersWithinString[i] === 0) {
+   preceedingZeros++;
+}
 
 
 //check for 9s
