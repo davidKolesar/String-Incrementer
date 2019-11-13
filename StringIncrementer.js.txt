@@ -4,7 +4,7 @@ function incrementString (argument)
 //check if parameter is null
 if(argument === null) 
 {
-console.log("return null");
+console.log("Argument is null");
   return 1;
 }
 
