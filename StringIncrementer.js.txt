@@ -26,7 +26,6 @@ for(var i = 0; i < chars.length; i++)
   {
     containsNumber = true;
     numbersWithinString.push(chars[i]);
-    break;
   }
 }
 
@@ -40,10 +39,11 @@ for(var i = 0; i < chars.length; i++)
 //handle adding with preceeding digits of zeros
 for(var i = 0; i < numbersWithinString.length; i++)
 {
-
+console.log("counting zeros in " + numbersWithinString[i]);
 //count zeros
-if(numbersWithinString[i] === 0) 
+if(numbersWithinString[i] === "0") 
 {
+console.log("Here is a zero!");
    preceedingZeros++;
 } 
 
@@ -70,6 +70,6 @@ for(var i = 0; i < preceedingZeros; i++)
   allPreceedingZeros = allPreceedingZeros + "0";
 }
 
- return argumentLettersWithoutCommas + allPreceedingZeros + argumentNumber;
+ return argumentLettersWithoutCommas + allPreceedingZeros.toString() + argumentNumber;
  
 }
