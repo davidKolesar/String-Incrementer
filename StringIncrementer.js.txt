@@ -73,7 +73,7 @@ var allPreceedingZeros = "";
 
 for(var i = 0; i < preceedingZeros; i++)
 {
-  allPreceedingZeros = allPreceedingZeros + "0";
+  allPreceedingZeros === allPreceedingZeros + "0";
 }
 
  return argumentLettersWithoutCommas + allPreceedingZeros.toString() + argumentNumber;
