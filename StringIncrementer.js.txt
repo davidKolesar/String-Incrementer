@@ -4,7 +4,7 @@ function incrementString (argument)
 //check if parameter is null
 if(argument === null) 
 {
-console.log("Argument is null");
+console.log("return null");
   return 1;
 }
 
@@ -35,7 +35,7 @@ for(var i = 0; i < chars.length; i++)
   } 
  
  var preceedingZeros = 0;
-
+ 
 //handle adding with preceeding digits of zeros
 for(var i = 0; i < numbersWithinString.length; i++)
 {
@@ -49,12 +49,12 @@ console.log("Here is a zero!");
 
 }
 
-
-//handle if number in argument is all zeros
-if(numbersWithinString.length === preceedingZeros)
+//handle if all zeros
+if(preceedingZeros = numbersWithinString.length)
 {
-preceedingZeros--;
-return 
+  console.log("All of the numbers are zero");
+  preceedingZeros--;
+  return argument + preceedingZeros + 1;
 }
 
 
