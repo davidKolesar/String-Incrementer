@@ -1,7 +1,5 @@
-function incrementString() 
+function incrementString (argument) 
 {
-
-argument = "foobar001";
 
 //check if parameter is null
 if(argument === null) 
@@ -56,7 +54,9 @@ if(preceedingZeros === numbersWithinString.length)
 {
   console.log("All of the numbers are zero");
   preceedingZeros--;
-  return argument + preceedingZeros + 1;
+  
+  var argumentSansLastZero = argument.substring(0, argument.length - 1);
+  return argumentSansLastZero + 1;
 }
 
 
@@ -75,7 +75,7 @@ var allPreceedingZeros = "";
 
 for(var i = 0; i < preceedingZeros; i++)
 {
-  allPreceedingZeros === allPreceedingZeros + "0";
+  allPreceedingZeros = allPreceedingZeros + "0";
 }
 
  return argumentLettersWithoutCommas + allPreceedingZeros.toString() + argumentNumber;
