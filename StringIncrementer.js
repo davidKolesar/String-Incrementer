@@ -52,7 +52,7 @@ console.log("Here is a zero!");
 }
 
 //handle if all zeros
-if(preceedingZeros = numbersWithinString.length)
+if(preceedingZeros === numbersWithinString.length)
 {
   console.log("All of the numbers are zero");
   preceedingZeros--;
