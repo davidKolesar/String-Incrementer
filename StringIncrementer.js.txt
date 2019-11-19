@@ -1,5 +1,7 @@
-function incrementString (argument) 
+function incrementString () 
 {
+
+argument = "foobar001";
 
 //check if parameter is null
 if(argument === null) 
