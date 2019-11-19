@@ -1,7 +1,5 @@
-function incrementString () 
+function incrementString (argument) 
 {
-
-var argument = "foobar00999";
 
 //check if parameter is null
 if(argument === null) 
@@ -16,6 +14,7 @@ var containsNumber = false;
 var numbersWithinString = [];
 var numbersToReturn = [];
 var lettersWithinString = [];
+var incrementDigits = false;
 
 
 for(var i = 0; i < chars.length; i++) 
@@ -66,9 +65,20 @@ if(preceedingZeros === numbersWithinString.length)
 var argumentNumberWithCommas = numbersWithinString.toString();
 var argumentNumberWithoutCommas = argumentNumberWithCommas.replace(/\,/g,"");
 var argumentNumber = parseInt(argumentNumberWithoutCommas);
+
+//count digits
+var originalDigits = argumentNumber.toString().length;
+
+//add 1 to argument
 argumentNumber++;
 
-//count if digits increment
+//count again
+var newDigits = argumentNumber.toString().length;
+
+if(originalDigits < newDigits)
+{
+  incrementDigits = true;
+}
 
 
 //combine String of argument with numbers
@@ -77,11 +87,18 @@ var argumentLettersWithoutCommas = argumentLettersWithCommas.replace(/\,/g,"");;
 var allPreceedingZeros = "";
 
 
+//check if digits increased
+if(incrementDigits) 
+{
+  preceedingZeros--;
+}
+
+
+
 for(var i = 0; i < preceedingZeros; i++)
 {
   allPreceedingZeros = allPreceedingZeros + "0";
 }
-
  return argumentLettersWithoutCommas + allPreceedingZeros.toString() + argumentNumber;
  
 }
