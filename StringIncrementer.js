@@ -1,5 +1,7 @@
-function incrementString (argument) 
+function incrementString () 
 {
+
+var argument = "foobar00999";
 
 //check if parameter is null
 if(argument === null) 
@@ -65,6 +67,8 @@ var argumentNumberWithCommas = numbersWithinString.toString();
 var argumentNumberWithoutCommas = argumentNumberWithCommas.replace(/\,/g,"");
 var argumentNumber = parseInt(argumentNumberWithoutCommas);
 argumentNumber++;
+
+//count if digits increment
 
 
 //combine String of argument with numbers
