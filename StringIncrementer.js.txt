@@ -1,4 +1,4 @@
-function incrementString () 
+function incrementString() 
 {
 
 argument = "foobar001";
