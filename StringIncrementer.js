@@ -1,21 +1,16 @@
 /**
  * Function to increment numbers on the end of a string 
  * - argument: String to be incremented.
-
  * @typedef {{argument: String}}
  * @public
  */
 function incrementString (argument) 
 {
 
-	//check if parameter is null
-	if(argument === null) 
-	{
-		console.log("Parmeter is null");
+	if(checkForNullArgument(argument)) {
 		return 1;
 	}
 
-	//check if parameter contains numbers
 	var chars = argument.split('');
 	var containsNumber = false;
 	var numbersWithinString = [];
@@ -23,7 +18,7 @@ function incrementString (argument)
 	var lettersWithinString = [];
 	var incrementDigits = false;
 
-
+	//check if parameter contains numbers
 	for(var i = 0; i < chars.length; i++) 
 	{
 	  if(isNaN(parseFloat(chars[i])))
@@ -88,7 +83,7 @@ function incrementString (argument)
 
 	//combine String of argument with numbers
 	var argumentLettersWithCommas = lettersWithinString.toString();
-	var argumentLettersWithoutCommas = argumentLettersWithCommas.replace(/\,/g,"");;
+	var argumentLettersWithoutCommas = argumentLettersWithCommas.replace(/\,/g,"");
 	var allPreceedingZeros = "";
 
 	//check if digits increased
@@ -103,4 +98,12 @@ function incrementString (argument)
 	}
 	
 	 return argumentLettersWithoutCommas + allPreceedingZeros.toString() + argumentNumber; 
+}
+
+function checkForNullArgument(argument){
+	if(argument === null) 
+	{
+		console.log("Parmeter is null");
+		return true;
+	}	
 }
